@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journalism Basics: Anatomy of an Article</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .news-font { font-family: 'Merriweather', serif; }
+        
+        /* Custom Select Styling */
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+        }
+
+        /* Animation for feedback */
+        @keyframes pop {
+            0% { transform: scale(0.95); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .animate-pop {
+            animation: pop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Header Section -->
+    <header class="bg-indigo-900 text-white py-12 px-6 sm:px-12 lg:px-24 shadow-lg relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #ffffff 10px, #ffffff 11px);"></div>
+        <div class="max-w-5xl mx-auto relative z-10">
+            <span class="uppercase tracking-widest text-indigo-300 font-semibold text-sm mb-2 block">Secondary 5 English / Journalism</span>
+            <h1 class="text-4xl sm:text-5xl font-bold mb-4 news-font">The Anatomy of an Article</h1>
+            <p class="text-lg sm:text-xl text-indigo-100 max-w-2xl leading-relaxed">
+                Before you dive into the facts, every news article relies on a structured opening to hook the reader. Let's break down the three most crucial parts of a news intro.
+            </p>
+        </div>
+    </header>
+
+    <!-- Theory Section -->
+    <main class="flex-grow w-full max-w-5xl mx-auto px-6 sm:px-12 py-12">
+        <section class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Headline Card -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 transition-transform hover:-translate-y-1 duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
+                    <h2 class="text-2xl font-bold mb-3 text-slate-900">1. Headline</h2>
+                    <p class="text-sm uppercase tracking-wide text-blue-600 font-semibold mb-4">The Hook</p>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        The main title of the article. It must be punchy, short, and use active verbs. Its main job is to grab the reader's attention and summarize the core event.
+                    </p>
+                    <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500 italic text-sm text-slate-700 news-font">
+                        "City Council Bans Single-Use Plastics"
+                    </div>
+                </div>
+
+                <!-- Secondary Headline Card -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 transition-transform hover:-translate-y-1 duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-purple-500"></div>
+                    <h2 class="text-2xl font-bold mb-3 text-slate-900">2. Secondary Headline</h2>
+                    <p class="text-sm uppercase tracking-wide text-purple-600 font-semibold mb-4">The Bridge / The Deck</p>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        Located just below the main headline. It adds vital context or a crucial secondary detail, acting as a bridge to keep you reading before the actual article starts.
+                    </p>
+                    <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500 italic text-sm text-slate-700 news-font">
+                        "Local businesses are given a six-month grace period to transition to greener alternatives."
+                    </div>
+                </div>
+
+                <!-- Lead Card -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 transition-transform hover:-translate-y-1 duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-emerald-500"></div>
+                    <h2 class="text-2xl font-bold mb-3 text-slate-900">3. Lead (Lede)</h2>
+                    <p class="text-sm uppercase tracking-wide text-emerald-600 font-semibold mb-4">The Foundation</p>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        The very first paragraph of the article. It contains the most important information and usually answers the 5 Ws: <strong>Who, What, Where, When, and Why</strong>.
+                    </p>
+                    <div class="bg-emerald-50 p-4 rounded-lg border-l-4 border-emerald-500 italic text-sm text-slate-700 news-font">
+                        "In a unanimous vote Thursday evening, city officials passed a strict new bylaw prohibiting the distribution of plastic bags to combat local pollution."
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Activity Section -->
+        <section id="activity" class="bg-white rounded-3xl shadow-md border border-slate-200 p-8 sm:p-12">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Activity: News Editor Challenge</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">
+                    A junior reporter dropped their notes, and the parts of their articles got scrambled! Read the 5 texts below. For each snippet, identify whether it is the <strong>Headline</strong>, <strong>Secondary Headline</strong>, or <strong>Lead</strong>.
+                </p>
+            </div>
+
+            <!-- Quiz Container (Populated by JS) -->
+            <div id="quiz-container" class="space-y-12"></div>
+            
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center">
+        <p>© 2026 Journalism Basics. Designed for Secondary 5 Education.</p>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Data for the 5 texts
+        const textsData = [
+            {
+                id: 1,
+                topic: "Science & Tech",
+                parts: [
+                    { id: '1-h', type: 'headline', text: 'Local Teen Wins National Science Fair' },
+                    { id: '1-s', type: 'secondary', text: 'Her innovative biodegradable plastic alternative caught the attention of top university researchers.' },
+                    { id: '1-l', type: 'lead', text: 'On Sunday, 17-year-old Maya Lin from Springfield High was awarded first place at the National Science Expo in Ottawa after presenting a new eco-friendly material made from potato starch.' }
+                ]
+            },
+            {
+                id: 2,
+                topic: "Sports",
+                parts: [
+                    { id: '2-h', type: 'headline', text: 'Underdogs Clinch Regional Championship' },
+                    { id: '2-s', type: 'secondary', text: 'A dramatic last-minute goal secured the team\'s first trophy in over two decades.' },
+                    { id: '2-l', type: 'lead', text: 'The Valley High Tigers defeated the reigning champions 2-1 last night at the City Arena, ending a 25-year title drought thanks to a stunning penalty shot by team captain Alex Reed.' }
+                ]
+            },
+            {
+                id: 3,
+                topic: "Local News",
+                parts: [
+                    { id: '3-h', type: 'headline', text: 'Historic Downtown Theater to Reopen' },
+                    { id: '3-s', type: 'secondary', text: 'Following a $2 million renovation, the beloved venue will resume operations this summer.' },
+                    { id: '3-l', type: 'lead', text: 'After being closed for five years due to structural concerns, the Grand Roxy Theater announced Wednesday that it will officially open its doors to the public with a gala screening on July 15th.' }
+                ]
+            },
+            {
+                id: 4,
+                topic: "School Board",
+                parts: [
+                    { id: '4-h', type: 'headline', text: 'School Board Introduces Later Start Times' },
+                    { id: '4-s', type: 'secondary', text: 'The controversial decision aims to improve student mental health and academic performance.' },
+                    { id: '4-l', type: 'lead', text: 'Starting next September, all high schools in the district will ring their first bell at 9:00 AM instead of 8:00 AM, following a year-long study by the education committee on teenage sleep patterns.' }
+                ]
+            },
+            {
+                id: 5,
+                topic: "Space Exploration",
+                parts: [
+                    { id: '5-h', type: 'headline', text: 'Mars Rover Discovers Subsurface Ice' },
+                    { id: '5-s', type: 'secondary', text: 'New findings suggest that accessible water may be more abundant on the red planet than previously thought.' },
+                    { id: '5-l', type: 'lead', text: 'NASA’s Perseverance rover beamed back radar data on Tuesday confirming the presence of massive ice deposits buried just beneath the surface of the Jezero Crater.' }
+                ]
+            }
+        ];
+
+        // Utility to shuffle an array
+        function shuffleArray(array) {
+            const newArr = [...array];
+            for (let i = newArr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+            }
+            return newArr;
+        }
+
+        const quizContainer = document.getElementById('quiz-container');
+
+        // Render the quizzes
+        function renderQuizzes() {
+            textsData.forEach((textData, index) => {
+                const shuffledParts = shuffleArray(textData.parts);
+                
+                const articleBlock = document.createElement('div');
+                articleBlock.className = "bg-slate-50 border border-slate-200 p-6 sm:p-8 rounded-2xl";
+                
+                // Header of the question
+                const header = document.createElement('div');
+                header.className = "flex justify-between items-center mb-6 border-b border-slate-200 pb-4";
+                header.innerHTML = `
+                    <h3 class="text-xl font-bold text-slate-800">Text ${index + 1}: <span class="text-indigo-600 font-normal">${textData.topic}</span></h3>
+                `;
+                articleBlock.appendChild(header);
+
+                // Container for the parts
+                const partsContainer = document.createElement('div');
+                partsContainer.className = "space-y-4";
+                
+                shuffledParts.forEach((part) => {
+                    const row = document.createElement('div');
+                    row.className = "flex flex-col md:flex-row gap-4 items-start md:items-center bg-white p-4 rounded-xl shadow-sm border border-slate-100";
+                    
+                    const selectWrapper = document.createElement('div');
+                    selectWrapper.className = "w-full md:w-1/3 shrink-0";
+                    
+                    const select = document.createElement('select');
+                    select.className = "w-full bg-slate-50 border border-slate-300 text-slate-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 block p-3 shadow-sm outline-none transition-all";
+                    select.dataset.correct = part.type;
+                    select.dataset.id = part.id;
+                    select.innerHTML = `
+                        <option value="" disabled selected>Identify this text...</option>
+                        <option value="headline">Headline</option>
+                        <option value="secondary">Secondary Headline</option>
+                        <option value="lead">Lead</option>
+                    `;
+                    
+                    // Reset styling on change
+                    select.addEventListener('change', function() {
+                        this.classList.remove('border-red-500', 'bg-red-50', 'text-red-700', 'border-green-500', 'bg-green-50', 'text-green-700');
+                        this.classList.add('border-slate-300', 'bg-slate-50', 'text-slate-700');
+                    });
+
+                    selectWrapper.appendChild(select);
+                    
+                    const textContent = document.createElement('div');
+                    textContent.className = "w-full md:w-2/3 news-font text-slate-800 text-lg md:text-base leading-relaxed";
+                    textContent.innerText = `"${part.text}"`;
+
+                    row.appendChild(selectWrapper);
+                    row.appendChild(textContent);
+                    partsContainer.appendChild(row);
+                });
+
+                articleBlock.appendChild(partsContainer);
+
+                // Footer / Button / Feedback area
+                const footer = document.createElement('div');
+                footer.className = "mt-8 flex flex-col sm:flex-row items-center justify-between gap-4";
+                
+                const btn = document.createElement('button');
+                btn.className = "w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-xl shadow-md transition-colors focus:ring-4 focus:ring-indigo-300";
+                btn.innerText = "Check Answers";
+                
+                const feedbackBox = document.createElement('div');
+                feedbackBox.className = "feedback-msg text-sm font-semibold hidden rounded-lg px-4 py-3 w-full sm:w-auto text-center";
+                
+                btn.onclick = () => checkAnswers(partsContainer, feedbackBox);
+
+                footer.appendChild(btn);
+                footer.appendChild(feedbackBox);
+                articleBlock.appendChild(footer);
+
+                quizContainer.appendChild(articleBlock);
+            });
+        }
+
+        // Validate logic
+        function checkAnswers(container, feedbackBox) {
+            const selects = container.querySelectorAll('select');
+            let allCorrect = true;
+            let answeredCount = 0;
+
+            selects.forEach(select => {
+                // Reset classes
+                select.classList.remove('border-red-500', 'bg-red-50', 'text-red-700', 'border-green-500', 'bg-green-50', 'text-green-700', 'border-slate-300', 'bg-slate-50');
+                
+                const selectedVal = select.value;
+                const correctVal = select.dataset.correct;
+
+                if (selectedVal) {
+                    answeredCount++;
+                    if (selectedVal === correctVal) {
+                        select.classList.add('border-green-500', 'bg-green-50', 'text-green-800');
+                    } else {
+                        select.classList.add('border-red-500', 'bg-red-50', 'text-red-800');
+                        allCorrect = false;
+                    }
+                } else {
+                    select.classList.add('border-slate-300', 'bg-slate-50');
+                    allCorrect = false;
+                }
+            });
+
+            feedbackBox.classList.remove('hidden', 'bg-green-100', 'text-green-800', 'bg-red-100', 'text-red-800', 'bg-amber-100', 'text-amber-800', 'animate-pop');
+            
+            // Force reflow for animation
+            void feedbackBox.offsetWidth; 
+            
+            feedbackBox.classList.add('animate-pop');
+
+            if (answeredCount < 3) {
+                feedbackBox.classList.add('bg-amber-100', 'text-amber-800');
+                feedbackBox.innerText = "Please classify all three parts before checking.";
+            } else if (allCorrect) {
+                feedbackBox.classList.add('bg-green-100', 'text-green-800');
+                feedbackBox.innerHTML = "✨ Perfect! You identified all parts correctly.";
+            } else {
+                feedbackBox.classList.add('bg-red-100', 'text-red-800');
+                feedbackBox.innerText = "Some parts are incorrect. Review the definitions and try again!";
+            }
+            feedbackBox.classList.remove('hidden');
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', renderQuizzes);
+
+    </script>
+</body>
+</html>
